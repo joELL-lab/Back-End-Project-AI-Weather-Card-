@@ -6,7 +6,7 @@ Step into a smarter way to plan your day with **WeatherWise.ai**. This app conne
 
 ## 👨🏻‍💻 Check out Demo
 
-[**Click Here**](https://traczoskar.github.io/ai_weather_app/) 👈
+[**Click Here**](https://github.com/joELL-lab/ai_weather_app/) 👈
 
 ![Data fetching](/.github/weather_wise_dark.gif)
 
