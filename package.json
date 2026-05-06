@@ -1,6 +1,6 @@
 {
   "name": "ai_weather_app",
-  "homepage": "https://traczoskar.github.io/ai_weather_app/",
+  "homepage": "https://github.com/joELL-lab",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -13,6 +13,7 @@
     "predeploy": "npm run build"
   },
   "dependencies": {
+    "@google/generative-ai": "^0.24.1",
     "@reduxjs/toolkit": "^2.2.5",
     "@tanstack/react-query": "^5.44.0",
     "@tanstack/react-query-devtools": "^5.44.0",
@@ -20,6 +21,7 @@
     "framer-motion": "^11.2.10",
     "gh-pages": "^6.1.1",
     "lottie-react": "^2.4.0",
+    "openai": "^6.35.0",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

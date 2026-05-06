@@ -18,7 +18,6 @@ import SuggestionTile from "../SuggestionTile";
 import { motion } from "framer-motion";
 import { useMediaQuery } from "react-responsive";
 import Popover from "../../../components/Popover";
-import Error from "../../../components/Error";
 
 interface SuggestionsDisplayProps {
   aiData: QueryData;
@@ -101,7 +100,31 @@ const SuggestionDisplay: React.FC<SuggestionsDisplayProps> = ({
           </Container>
         </motion.div>
       )}
-      {error && <Error error={error} refersTo="AI response section" />}
+      {error && (
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="w-full"
+        >
+          <Container>
+            <div className="flex flex-col items-center gap-4 w-full p-6">
+              <p className="text-sky-700 dark:text-sky-200 text-center text-sm md:text-base">
+                ⚠️{" "}
+                {error.message?.includes("quota") || error.message?.includes("429")
+                  ? "AI quota has been temporarily exceeded. Please wait a moment and try again."
+                  : "Something went wrong with the AI request. Please try again."}
+              </p>
+              <button
+                onClick={aiRequest}
+                className="px-6 py-2 bg-sky-600 hover:bg-sky-700 text-white text-sm font-semibold rounded-lg transition-colors shadow-md"
+              >
+                🔄 Try Again
+              </button>
+            </div>
+          </Container>
+        </motion.div>
+      )}
       {aiResponse && !isCollapsed ? (
         <Container
           isCollapsed={isCollapsed}

@@ -76,24 +76,24 @@ export const usePromptDataBase = (
       "places_to_visit": ["Place #1 near the location", "Place #2 near the location", ...]
       "music": [
         {
-          "artist": "Artist #1", 
-          "title": "Title #1", 
-          "link": "YouTube href link"
+          "artist": "Artist Name", 
+          "title": "Song Title", 
+          "link": "https://www.youtube.com/results?search_query=Artist+Name+Song+Title"
         },
         {
-          "artist": "Artist #2", 
-          "title": "Title #2", 
-          "link": "YouTube href link"
+          "artist": "Artist Name", 
+          "title": "Song Title", 
+          "link": "https://www.youtube.com/results?search_query=Artist+Name+Song+Title"
         }
       ],
      "movies": [
         {
           "title": "Movie title #1",
-          "link": "IMDB href link"
+          "link": "https://www.imdb.com/find/?q=Movie+title+1"
         },
         {
           "title": "Movie title #2",
-          "link": "IMDB href link"
+          "link": "https://www.imdb.com/find/?q=Movie+title+2"
         }
       ],
       "general_advice": "General encouraging and engaging advice for the day in casual style. Mention about air quality."

@@ -8,9 +8,10 @@ import { useForecastData } from "../hooks/api/useForecastData";
 import WeatherForecast from "../features/weather/WeatherForecast";
 import InfoDisplay from "../features/info/InfoDisplay";
 import Footer from "../components/Footer";
-import { useAIResponse } from "../hooks/openAI/useAIResponse";
+import { useGeminiResponse } from "../hooks/openAI/useGeminiResponse";
 import SuggestionDisplay from "../features/suggestions/SuggestionDisplay";
 import { usePromptDataBase } from "../hooks/openAI/usePromptDataBase";
+import RagChat from "../components/RagChat";
 
 const App: React.FC = () => {
   //---Geocoding Hooks---
@@ -55,7 +56,7 @@ const App: React.FC = () => {
     selectedLocation
   );
 
-  const { refetch, isFetching: isAIFetching } = useAIResponse(prompt);
+  const { refetch, isFetching: isAIFetching } = useGeminiResponse(prompt);
 
   useEffect(() => {
     setAiData((prev) => ({
@@ -67,10 +68,11 @@ const App: React.FC = () => {
   //---AI Request Function---
 
   const getWeatherAdvice = async () => {
-    setAiData((prev) => ({
-      ...prev,
+    setAiData({
       isPending: true,
-    }));
+      data: null,
+      error: null,
+    });
     try {
       const { data: aiResponse, error: aiError } = await refetch();
       setAiData({
@@ -150,6 +152,10 @@ const App: React.FC = () => {
         />
       </div>
       <Footer />
+      <RagChat
+        city={selectedLocation?.name}
+        weatherCondition={weatherData.data?.weather?.[0]?.main}
+      />
     </main>
   );
 };

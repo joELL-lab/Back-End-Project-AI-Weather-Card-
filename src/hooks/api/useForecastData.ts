@@ -8,7 +8,7 @@ const fetchForecast = async (lat: number, lon: number) => {
   );
   if (!response.ok) {
     throw new Error(
-      "Failed to fetch weather data! Response status: " +
+      "Failed to fetch forecast data! Response status: " +
         response.status +
         " - " +
         response.statusText
