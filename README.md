@@ -4,11 +4,6 @@
 
 Step into a smarter way to plan your day with **WeatherWise.ai**. This app connects to the OpenWeather API to provide current weather data tailored to your location. It integrates with OpenAI's ChatGPT for personalized activity suggestions and attire recommendations, ensuring you're perfectly prepared, no matter the weather.
 
-## 👨🏻‍💻 Check out Demo
-
-[**Click Here**](https://github.com/joELL-lab/ai_weather_app/) 👈
-
-![Data fetching](/.github/weather_wise_dark.gif)
 
 ## 🛠 Tech Stack
 
