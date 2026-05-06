@@ -49,7 +49,6 @@ Step into a smarter way to plan your day with **WeatherWise.ai**. This app conne
 
 WeatherWise.ai leverages the power of OpenAI's ChatGPT to provide personalized suggestions. The integration is managed through custom endpoints and webhooks configured in Make.com, ensuring seamless communication and data processing.
 
-![AI Integration](/.github/weather_wise_AI.gif)
 
 ### <ins>Weather Data from OpenWeatherMap</ins> &nbsp;🌦
 
@@ -63,15 +62,14 @@ In addition to weather data, WeatherWise.ai includes an air quality index featur
 
 WeatherWise.ai reads your system or browser theme preferences and adapts to it. In every moment you can switch between dark and light mode by using dedicated intuitive button placed in the header section (just right to main logo of the app).
 
-![Theme Switch](/.github/weather_wise_light.gif)
 
 ## 📖 How to Use
 
 1. **Clone the Repository**:
 
    ```sh
-   git clone https://github.com/traczoskar/ai_weather_app.git
-   cd ai_weather_app
+   git clone https://github.com/joELL-lab/Back-End-project-AI-Weather-Card-.git
+   cd Back-End-project-AI-Weather-Card-
    ```
 
 2. **Install Dependencies**:
